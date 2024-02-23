@@ -1,0 +1,36 @@
+package EcommerseWebsite.Model;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Table(name = "productTable")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(name = "product_id")
+    private int productId;
+    @Column(name = "product_name")
+    private String ProductName;
+    @Column(name = "product_qty")
+    private String productQty;
+    @Column(name = "product_price")
+    private int productPrice;
+    @Column(name = "product_cat")
+    private String productCat;
+    @Column(name = "discount_price")
+    private double discountPrice;
+    @Column(name = "subCategory")
+    private String productSubCategory;
+    @Column(name = "product_brand")
+    private String productBrand;
+}
