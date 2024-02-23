@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    height: auto;
+    width: 100%;
+   background-color:rgb(123, 160, 230);
+}
+.navart{
+    height: 55px;
+    width: 80%;
+    background-color:rgb(123, 160, 230);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color:black;
+}
+a{
+ color:black;
+}
+
+section{
+    display: flex;
+    align-items: center;
+
+}
+.card{
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   flex-wrap: wrap;
+  padding-left: 1%;
+
+}
+.btn{
+    width: 100px;
+    height: 20px;
+    background: rgb(63, 40, 112);
+    border: 2px orange solid;
+    margin-top: 13px;
+    color: rgb(202, 196, 196);
+    font-size: 15px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    /* text-align: right 300px; */
+}
+h1{
+    color: rgb(188, 46, 28);
+}
+.cart-img{
+ height: 20px;
+ width: 50px;
+}
+
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <article class="navart">
+        <div class="navdiv"> <a href="loginSuccess.html"><i class="fa-solid fa-house"></i></a></div>
+        <div class="navdiv"><a href="">Groceries</a></div>
+        <div class="navdiv"><a href="">Home & Kitchen</a></div>
+        <div class="navdiv"><a href="">Fashion</a></div>
+        <div class="navdiv"><a href="">Electronics</a></div>
+        <div class="navdiv"><a href="">Sports</a></div>
+        <div class="navdiv"></div>
+        <div class="navdiv"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div class="navdiv"><i class="fa-solid fa-bag-shopping"></i></div>
+        <div class="navdiv"><i class="fa-solid fa-bars"></i> </div>
+    </article>
+</nav>
+<br>
+<br>
+<h1 >Groceries</h1>
+<section>
+
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/492367966/surf-excel-easy-wash-detergent-powder-5-kg-product-images-o492367966-p590837659-0-202208111657.jpg?im=Resize=(223,280)" alt="" height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/491085658/pears-pure-gentle-soap-with-natural-oils-125-g-buy-4-get-1-free-product-images-o491085658-p491085658-0-202306150319.jpg?im=Resize=(360,360)" alt="" height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/490000073/tata-iodised-salt-1-kg-product-images-o490000073-p490000073-0-202302131739.jpg?im=Resize=(360,360)" alt=""  height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/490001992/brooke-bond-red-label-strong-blend-tea-1-kg-product-images-o490001992-p490001992-0-202304281622.jpg?im=Resize=(360,360)" alt=""  height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+
+</section>
+<br>
+<br>
+<h1 >Home & Kitchen</h1>
+<section>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/493831354/uninox-push-lock-steel-container-set-of-4-product-images-o493831354-p603737310-0-202310271353.jpg?im=Resize=(360,360)" alt=""  height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/493645081/livflame-black-toughened-glass-top-2-burner-gas-stove-product-images-o493645081-p601584355-0-202310041813.jpg?im=Resize=(360,360)" alt=""  height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/493830167/nirlon-red-aluminium-non-stick-cookware-set-3-pcs-product-images-o493830167-p602022890-0-202305311112.jpg?im=Resize=(360,360)" alt="" height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/494241441/repose-spinemagic-orthopaedic-5-inch-dual-comfort-memory-foam-mattress-78x72x5-inch-king-size-mattress-product-images-o494241441-p605497606-0-202310301833.jpg?im=Resize=(360,360)" alt="" height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+</section>
+<br>
+<br>
+<h1 >Fashion</h1>
+<section>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/rv7bvcqyhh/gespo-black-mustard-dark-green-colorblocked-polo-neck-half-sleeve-casual-t-shirt-product-images-rv7bvcqyhh-0-202304050245.jpg?im=Resize=(330,410)" alt="" height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/rvxsvl3imx/rudraaksha-stylish-dress-for-women-product-images-rvxsvl3imx-0-202210042034.jpg?im=Resize=(330,410)" alt="" height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/rvsuwqn6ol/aadi-men-s-black-mesh-running-sport-shoes-product-images-rvsuwqn6ol-0-202304211147.jpg?im=Resize=(330,410)" alt=""height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/469205654_black/np77071pp01-water-resistant-dual-watch-model-469205654_black-0-202304112205.jpg?im=Resize=(330,410)" alt=""height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+</section>
+<br>
+<br>
+<h1 >Electronics</h1>
+<section>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/491604413/kelvinator-190-litres-2-star-single-door-refrigerator-refrigerator-dark-blue-krd-a210dbp-digital-o491604413-p590039922-0-202208301613.jpeg?im=Resize=(360,360)" alt="" height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/493839312/apple-iphone-15-128gb-blue-digital-o493839312-p604568766-0-202309141654.jpeg?im=Resize=(360,360)" alt="" height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/492664434/lg-7-kg-5-star-semi-automatic-top-loading-washing-machine-p7020ngaz-dark-gray-wind-jet-dry-digital-o492664434-p591053951-0-202310031944.jpeg?im=Resize=(360,360)" alt=""height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/rvxbvtmjza/prolife-elite-dlx-premium-750w-mixer-grinder-4-jars-green-white-product-images-orvxbvtmjza-p603865975-0-202308132030.jpg?im=Resize=(360,360)" alt=""height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+</section>
+<br>
+<br>
+<h1>Sports</h1>
+<section>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/rvhl8mqssg/sx-fitness-20kg-rubber-plates-with-3ft-curl-3ft-straight-rod-23mm-pair-of-dumbbell-rods-weight-lifting-equipment-with-accessories-workout-exercise-kit-setup-combo-product-images-orvhl8mqssg-p600244609-0-202304070238.jpg?im=Resize=(360,360)" alt="" height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/rvpdbdc2y5/beatxp-vortex-plus-4m-air-bike-exercise-cycle-with-adjustable-cushioned-seat-moving-handles-back-support-tummy-twister-black-product-images-orvpdbdc2y5-p592463815-0-202207090758.jpg?im=Resize=(360,360)" alt="" height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/rvsnehuhrm/avon-buke-bicyclesthrust-26tmtbwith-26-inches-wheel-size-and-17-5-inches-erw-high-tensile-steel-frame-rigid-suspension-caliper-brakes-and-steel-rims-available-in-matt-black-suitable-for-all-terrains-product-images-orvsnehuhrm-p600733119-0-202304201112.jpg?im=Resize=(360,360)" alt=""height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+    <div class="card">
+        <img class="img-card"  src="https://www.jiomart.com/images/product/original/rvioburjak/powermax-tdm-98-motorized-treadmill-with-usb-connection-heart-rate-sensors-product-images-orvioburjak-p590564658-0-202108260347.jpg?im=Resize=(360,360)" alt=""height="300px">
+        <button class="btn" type="submit">ADD CART</button>
+    </div>
+</section>
+</body>
+</html>
