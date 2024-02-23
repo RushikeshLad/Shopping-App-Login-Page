@@ -1,0 +1,45 @@
+package EcommerseWebsite.Controller;
+
+import EcommerseWebsite.Model.LoginForm;
+import EcommerseWebsite.Model.User;
+import EcommerseWebsite.Service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@org.springframework.stereotype.Controller
+public class Controller {
+    @Autowired
+    private UserService service;
+
+    @GetMapping("/createObject")
+    public String createObject(Model model) {
+        model.addAttribute("userObject", new User());
+        return "registration";
+    }
+    @PostMapping("/addUser")
+    public String addUser(User u) {
+        service.addUser(u);
+        return "redirect:/login";
+    }
+
+    @GetMapping("/login")
+    public String showLoginForm(Model model) {
+        model.addAttribute("loginForm", new LoginForm());
+        return "login";
+    }
+    @PostMapping("/login")
+    public String checkLogin(LoginForm loginForm, Model model) {
+        String identifier = loginForm.getIdentifier();
+        String password = loginForm.getPassword();
+
+        boolean status = service.checkLogin(identifier,password);
+        if (status) {
+            return "loginSuccess";
+        } else {
+            model.addAttribute("error", "Invalid UserName or Password");
+            return "login";
+        }
+    }
+}
