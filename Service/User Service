@@ -1,0 +1,35 @@
+package EcommerseWebsite.Service;
+
+import EcommerseWebsite.Model.User;
+import EcommerseWebsite.Repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserService {
+    @Autowired
+    private UserRepository repository;
+
+    public void addUser(User user) {
+        repository.save(user);
+    }
+
+    public boolean checkLogin(String identifier, String password) {
+        User user;
+
+        if(identifier.charAt(1)=='6'||identifier.charAt(1)=='7'||identifier.charAt(1)=='8'||identifier.charAt(1)=='9') {
+            user = repository.findUserByNumber(identifier);
+        } else if (identifier.contains("@")) {
+            user = repository.findUserByEmail(identifier);
+        } else {
+            user = repository.findUserByUserName(identifier);
+        }
+
+        if (user!=null) {
+            if (user.getPassword().equals(password)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
